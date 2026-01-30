@@ -148,6 +148,16 @@ app.post('/orders', (req, res) => {
   res.json(newOrder);
 });
 
+app.delete('/orders/:id', (req, res) => {
+  const db = loadDb();
+  const orders = db.orders || [];
+  const filtered = orders.filter(o => String(o.id) !== String(req.params.id));
+  db.orders = filtered;
+  saveDb(db);
+  broadcastChange(db);
+  res.json({ success: true });
+});
+
 app.get('/admins', (req, res) => {
   const db = loadDb();
   const admins = db.admins || [];
@@ -242,8 +252,8 @@ wss.on('connection', (ws) => {
 // Start server
 const PORT = process.env.PORT || 3000;
 httpServer.listen(PORT, '0.0.0.0', () => {
-  console.log(`\n[✓ Server] Started on http://0.0.0.0:${PORT}`);
-  console.log(`[✓ WebSocket] Ready on ws://192.168.1.182:${PORT}`);
+  console.log(`\n[✓ Server] Started on http://localhost:${PORT}`);
+  console.log(`[✓ WebSocket] Ready on ws://localhost:${PORT}`);
   console.log(`[✓ Watch] Monitoring db.json for changes\n`);
 });
 
