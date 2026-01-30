@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>order</title>
+    <link rel="stylesheet" href="./css/order.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="headerContainer">
+        <div class="headerTitle">
+          <img src="./img/logo2.png" alt="">
+          <a id="logo" class="nav-link title" href="home.html">DineLink</a>
+        </div>
+        <nav class="nav">
+          <a class="nav-link active" href="order.html">Orders</a>
+        </nav>
+        <div class="cartLogoContainer">
+          <a class="cartLink" href="cart.html">
+          <img src="./img/cart3.png" style="height: 35px; width: 35px;" alt="">
+          <span id="cartCount"></span>
+          </a>
+        </div>
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      </div>
+    </header>
+    <div class="main-content">
+      <div id="orderContainer" class="orderContainer"></div>
+      <div id="summary" class="summary"></div>
+    </div>
+
+    <div id="errorPopup1" class="popup">
+      <div id="errorPopup1Content" class="popupContent">
+        <span class="close" onclick="closeErrorPopUp1()">&times;</span>
+        <img src="./img/error.png" alt="" />
+        <p>Network response was not ok</p>
+        <button class="okButton error" onclick="closeErrorPopUp1()">OK</button>
+      </div>
+    </div>
+
+    <div id="errorPopup2" class="popup">
+      <div id="errorPopup2Content" class="popupContent">
+        <span class="close" onclick="closeErrorPopUp2()">&times;</span>
+        <img src="./img/error.png" alt="" />
+        <p>There has been a problem with your fetch operation</p>
+        <button class="okButton error" onclick="closeErrorPopUp2()">OK</button>
+      </div>
+    </div>
+
+    <script src="./js/config.js"></script>
+    <script src="./js/notify.js"></script>
+    <script src="./js/ui.js"></script>
+    <script src="./js/order.js"></script>
+  </body>
+</html>

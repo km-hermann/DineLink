@@ -1,0 +1,372 @@
+{
+  "admins": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin"
+    }
+  ],
+  "products": [
+    {
+      "id": "36f2",
+      "name": "Fried Rice",
+      "description": "Fragrant rice stir-fried with vegetables, spices, and your choice of protein for a savory delight.",
+      "price": 1250,
+      "image": "./img/rice.jpg",
+      "stock": 21,
+      "category": "Main Course",
+      "cookingTime": 10
+    },
+    {
+      "id": "69b7",
+      "name": "Pan Cake",
+      "description": "Fluffy golden pancakes served with syrup, fruit toppings, or a touch of whipped cream.",
+      "price": 750,
+      "image": "./img/panCake.jpg",
+      "stock": 32,
+      "category": "Fast Food",
+      "cookingTime": 5
+    },
+    {
+      "id": "2d64",
+      "name": "Roasted Fish",
+      "description": "Whole fish seasoned and oven-roasted to perfection, crispy on the outside and tender inside.",
+      "price": 1500,
+      "image": "./img/fish.jpg",
+      "stock": 16,
+      "category": "Main Course",
+      "cookingTime": 15
+    },
+    {
+      "id": "7877",
+      "name": "Grilled Chicken",
+      "description": "Juicy chicken grilled with herbs and spices, offering smoky flavor and succulent texture.",
+      "price": 2750,
+      "image": "./img/chicken.jpg",
+      "stock": 16,
+      "category": "Main Course",
+      "cookingTime": 15
+    },
+    {
+      "id": "e8e1",
+      "name": "Fruit Salad",
+      "description": "A refreshing mix of seasonal fruits, lightly chilled and tossed with a nice hint of citrus.",
+      "price": 1500,
+      "image": "./img/fruitSalad.jpg",
+      "stock": 15,
+      "category": "Fruits",
+      "cookingTime": 15
+    },
+    {
+      "id": "b3a0",
+      "name": "Beef Steak",
+      "description": "Tender beef steak grilled to perfection, served with a side of vegetables.",
+      "price": 2500,
+      "image": "./img/beaf.jpg",
+      "stock": 29,
+      "category": "Main Course",
+      "cookingTime": 15
+    },
+    {
+      "id": "bb1b",
+      "name": "Cup Cake",
+      "description": "Soft and sweet mini cakes topped with creamy frosting-perfect for a quick treat.",
+      "price": 750,
+      "image": "./img/cupCake.jpg",
+      "stock": 36,
+      "category": "Desserts",
+      "cookingTime": 15
+    },
+    {
+      "id": "f20e",
+      "name": "Pasta",
+      "description": "Classic pasta tossed in rich sauce with vegetables or meat, garnished with herbs and cheese.",
+      "price": 1250,
+      "image": "./img/pasta.jpg",
+      "stock": 21,
+      "category": "Main Course",
+      "cookingTime": 15
+    },
+    {
+      "id": "9e2f",
+      "name": "Sandwich",
+      "description": "Freshly made sandwich layered with meats, veggies, and sauces in soft or toasted bread.",
+      "price": 1150,
+      "image": "./img/burger.jpg",
+      "stock": 24,
+      "category": "Fast Food",
+      "cookingTime": 15
+    },
+    {
+      "id": "8e83",
+      "name": "Donut",
+      "description": "Sweet, ring-shaped pastry fried to golden perfection and glazed or sprinkled.",
+      "price": 350,
+      "image": "./img/donut.jpg",
+      "stock": 32,
+      "category": "Fast Food",
+      "cookingTime": 15
+    },
+    {
+      "id": "7b86",
+      "name": "Spaghetti",
+      "description": " Long pasta strands served with tomato-based sauce, meatballs, or creamy options.",
+      "price": 1500,
+      "image": "./img/spaghetti.jpg",
+      "stock": 21
+    },
+    {
+      "id": "e737",
+      "name": "Fruit Tarte",
+      "description": "A delightful tart filled with fresh fruits and a creamy custard, all encased in a buttery pastry.",
+      "price": 4500,
+      "image": "./img/tarte.jpg",
+      "stock": 12,
+      "category": "Desserts",
+      "cookingTime": 15
+    },
+    {
+      "id": "1e45",
+      "name": "Vegetable Salade",
+      "description": "A fresh mix of seasonal vegetables, lightly dressed for a crisp and healthy option.",
+      "price": 2750,
+      "image": "./img/salade.jpg",
+      "stock": 23,
+      "category": "Fruits",
+      "cookingTime": 15
+    },
+    {
+      "id": "d7dc",
+      "name": "Pizza",
+      "description": "Italian dish consisting of a usually round, flat base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients.",
+      "price": 1750,
+      "image": "./img/pizza.jpg",
+      "stock": 41,
+      "category": "Fast Food",
+      "cookingTime": 15
+    },
+    {
+      "id": "8dbd",
+      "name": "Strawberry Cake",
+      "description": "A delightful cake made with fresh strawberries and whipped cream.",
+      "price": 3500,
+      "image": "./img/strewberryCake.jpg",
+      "stock": 21,
+      "category": "Desserts",
+      "cookingTime": 15
+    },
+    {
+      "id": "4b7c",
+      "name": "White Creamed Cake",
+      "description": "A rich and creamy cake made with layers of white chocolate and fresh cream.",
+      "price": 7500,
+      "image": "./img/creamedCake.jpg",
+      "stock": 15,
+      "category": "Desserts",
+      "cookingTime": 15
+    }
+  ],
+  "orders": [
+    {
+      "id": "7235",
+      "items": [
+        {
+          "id": "f20e",
+          "name": "Pasta",
+          "description": "Classic pasta tossed in rich sauce with vegetables or meat, garnished with herbs and cheese.",
+          "price": 2500,
+          "image": "./img/pasta.jpg",
+          "stock": 21,
+          "category": "Main Course",
+          "cookingTime": 15,
+          "qty": 2,
+          "orderId": 74831,
+          "status": "delivered",
+          "tableNumber": "7235",
+          "orderTime": "2026-01-30T01:05:47.391Z"
+        }
+      ],
+      "createdAt": "2026-01-30T01:05:27.379Z"
+    },
+    {
+      "id": 16,
+      "items": [
+        {
+          "id": "69b7",
+          "name": "Pan Cake",
+          "description": "Fluffy golden pancakes served with syrup, fruit toppings, or a touch of whipped cream.",
+          "price": 750,
+          "image": "./img/panCake.jpg",
+          "stock": 32,
+          "category": "Fast Food",
+          "cookingTime": 5,
+          "qty": 1,
+          "orderId": 541464,
+          "status": "pending",
+          "tableNumber": 16,
+          "orderTime": "2026-01-30T00:07:59.658Z"
+        },
+        {
+          "id": "2d64",
+          "name": "Roasted Fish",
+          "description": "Whole fish seasoned and oven-roasted to perfection, crispy on the outside and tender inside.",
+          "price": 1500,
+          "image": "./img/fish.jpg",
+          "stock": 16,
+          "category": "Main Course",
+          "cookingTime": 15,
+          "qty": 1,
+          "orderId": 777032,
+          "status": "pending",
+          "tableNumber": 16,
+          "orderTime": "2026-01-30T00:07:59.658Z"
+        },
+        {
+          "id": "7877",
+          "name": "Grilled Chicken",
+          "description": "Juicy chicken grilled with herbs and spices, offering smoky flavor and succulent texture.",
+          "price": 2750,
+          "image": "./img/chicken.jpg",
+          "stock": 16,
+          "category": "Main Course",
+          "cookingTime": 15,
+          "qty": 1,
+          "orderId": 43474,
+          "status": "pending",
+          "tableNumber": 16,
+          "orderTime": "2026-01-30T00:07:59.658Z"
+        }
+      ],
+      "createdAt": "2026-01-30T00:07:59.663Z"
+    },
+    {
+      "id": "9354",
+      "items": [
+        {
+          "id": "7877",
+          "name": "Grilled Chicken",
+          "description": "Juicy chicken grilled with herbs and spices, offering smoky flavor and succulent texture.",
+          "price": 2750,
+          "image": "./img/chicken.jpg",
+          "stock": 16,
+          "category": "Main Course",
+          "cookingTime": 15,
+          "qty": 1,
+          "orderId": 299140,
+          "status": "cooking",
+          "tableNumber": "9354",
+          "orderTime": "2026-01-30T00:50:53.260Z"
+        },
+        {
+          "id": "bb1b",
+          "name": "Cup Cake",
+          "description": "Soft and sweet mini cakes topped with creamy frosting-perfect for a quick treat.",
+          "price": 750,
+          "image": "./img/cupCake.jpg",
+          "stock": 36,
+          "category": "Desserts",
+          "cookingTime": 15,
+          "qty": 1,
+          "orderId": 57096,
+          "status": "delivered",
+          "tableNumber": "9354",
+          "orderTime": "2026-01-30T00:50:53.260Z"
+        }
+      ],
+      "createdAt": "2026-01-30T00:50:33.261Z"
+    },
+    {
+      "id": "9354",
+      "items": [
+        {
+          "id": "7877",
+          "name": "Grilled Chicken",
+          "description": "Juicy chicken grilled with herbs and spices, offering smoky flavor and succulent texture.",
+          "price": 2750,
+          "image": "./img/chicken.jpg",
+          "stock": 16,
+          "category": "Main Course",
+          "cookingTime": 15,
+          "qty": 1,
+          "orderId": 299140,
+          "status": "pending",
+          "tableNumber": "9354",
+          "orderTime": "2026-01-30T00:50:53.260Z"
+        },
+        {
+          "id": "bb1b",
+          "name": "Cup Cake",
+          "description": "Soft and sweet mini cakes topped with creamy frosting-perfect for a quick treat.",
+          "price": 750,
+          "image": "./img/cupCake.jpg",
+          "stock": 36,
+          "category": "Desserts",
+          "cookingTime": 15,
+          "qty": 1,
+          "orderId": 57096,
+          "status": "pending",
+          "tableNumber": "9354",
+          "orderTime": "2026-01-30T00:50:53.260Z"
+        }
+      ],
+      "createdAt": "2026-01-30T00:50:33.261Z"
+    },
+    {
+      "id": "7235",
+      "items": [
+        {
+          "id": "36f2",
+          "name": "Fried Rice",
+          "description": "Fragrant rice stir-fried with vegetables, spices, and your choice of protein for a savory delight.",
+          "price": 1250,
+          "image": "./img/rice.jpg",
+          "stock": 21,
+          "category": "Main Course",
+          "cookingTime": 10,
+          "qty": 1,
+          "orderId": 546344,
+          "status": "pending",
+          "tableNumber": "7235",
+          "orderTime": "2026-01-30T00:52:02.760Z"
+        },
+        {
+          "id": "69b7",
+          "name": "Pan Cake",
+          "description": "Fluffy golden pancakes served with syrup, fruit toppings, or a touch of whipped cream.",
+          "price": 750,
+          "image": "./img/panCake.jpg",
+          "stock": 32,
+          "category": "Fast Food",
+          "cookingTime": 5,
+          "qty": 1,
+          "orderId": 263859,
+          "status": "pending",
+          "tableNumber": "7235",
+          "orderTime": "2026-01-30T00:52:02.760Z"
+        }
+      ],
+      "createdAt": "2026-01-30T00:51:42.758Z"
+    },
+    {
+      "id": "7235",
+      "items": [
+        {
+          "id": "f20e",
+          "name": "Pasta",
+          "description": "Classic pasta tossed in rich sauce with vegetables or meat, garnished with herbs and cheese.",
+          "price": 2500,
+          "image": "./img/pasta.jpg",
+          "stock": 21,
+          "category": "Main Course",
+          "cookingTime": 15,
+          "qty": 2,
+          "orderId": 74831,
+          "status": "pending",
+          "tableNumber": "7235",
+          "orderTime": "2026-01-30T01:05:47.391Z"
+        }
+      ],
+      "createdAt": "2026-01-30T01:05:27.379Z"
+    }
+  ]
+}

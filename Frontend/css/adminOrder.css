@@ -1,0 +1,175 @@
+/* =========================================
+   ADMIN ORDER STYLES
+   ========================================= */
+.orderContainer {
+  max-width: var(--max-width);
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.tableSection {
+  margin-bottom: 50px;
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 20px;
+  border: 2px solid #eee;
+}
+
+.tableHeader {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--accent);
+  width: fit-content;
+}
+
+/* Grid for items within a table */
+.itemsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.orderItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.orderItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.itemImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.itemInfo {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.itemName {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.itemDetail {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.itemPrice {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--success);
+  margin-bottom: 15px;
+}
+
+/* Status Buttons with Requested Colors */
+.statusButton {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  width: 100%;
+  max-width: 180px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Pending -> Green */
+.pending { 
+  background: #e8f5e9; 
+  color: #2e7d32; 
+  border: 2px solid #c8e6c9; 
+}
+
+/* Cooking -> Orange */
+.cooking { 
+  background: #fff3e0; 
+  color: #ef6c00; 
+  border: 2px solid #ffe0b2; 
+}
+
+/* Delivered -> Blue */
+.delivered { 
+  background: #e3f2fd; 
+  color: #1565c0; 
+  border: 2px solid #bbdefb; 
+}
+
+.statusButton:hover {
+  filter: brightness(0.9);
+  transform: scale(1.02);
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 965px) {
+  .itemsGrid {
+    grid-template-columns: repeat(4, 1fr); /* Force 3 columns even on small screens */
+    gap: 15px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 825px) {
+  .itemsGrid {
+    grid-template-columns: repeat(3, 1fr); /* Force 3 columns even on small screens */
+    gap: 15px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 630px) {
+  .itemsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .tableSection {
+    padding: 15px;
+  }
+
+  .orderItem {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .itemsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .itemName {
+    font-size: 0.9rem;
+  }
+
+  .tableHeader {
+    font-size: 1.2rem;
+  }
+}

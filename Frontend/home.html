@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="shortcut icon" href="./img/logo3.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/home.css" />
+  </head>
+  <body>
+    <header>
+      <div class="headerContainer">
+        <div class="headerTitle">
+          <img src="./img/logo2.png" alt="" />
+          <a id="logo" class="nav-link title" href="home.html">DineLink</a>
+        </div>
+        <nav class="nav">
+          <a class="nav-link" href="order.html">Orders</a>
+        </nav>
+        <div class="cartLogoContainer">
+          <a class="cartLink" href="cart.html">
+            <img
+              src="./img/cart3.png"
+              style="height: 35px; width: 35px"
+              alt=""
+            />
+            <span id="cartCount"></span>
+          </a>
+        </div>
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      </div>
+    </header>
+    <div class="main-content">
+      <section id="welcome" class="welcome-hero">
+        <h1>Welcome to DineLink</h1>
+        <p>Real-time flavors, delivered with speed.</p>
+        <button class="lets-dine-btn" onclick="scrollToMenu()">Let's Dine</button>
+      </section>
+
+      <div id="menu-anchor"></div>
+      
+      <div class="category-tabs">
+        <button class="tab-btn active" onclick="filterCategory('All')">All</button>
+        <button class="tab-btn" onclick="filterCategory('Main Course')">Main Courses</button>
+        <button class="tab-btn" onclick="filterCategory('Drinks')">Drinks</button>
+        <button class="tab-btn" onclick="filterCategory('Fast Food')">Fast Food</button>
+        <button class="tab-btn" onclick="filterCategory('Desserts')">Desserts</button>
+        <button class="tab-btn" onclick="filterCategory('Fruits')">Fruits</button>
+      </div>
+
+      <div class="searchContainer">
+        <input type="text" id="search" placeholder="Search for your favorite dish..." />
+      </div>
+      <div id="foodList" class="foodList"></div>
+    </div>
+
+    <div id="errorPopup1" class="popup">
+      <div id="popup1Content" class="popupContent">
+        <span class="close" onclick="closeErrorPopUp1()">&times;</span>
+        <img src="./img/error.png" alt="" />
+        <p>Network response was not ok</p>
+        <button class="okButton error" onclick="closeErrorPopUp1()">OK</button>
+      </div>
+    </div>
+
+    <div id="errorPopup2" class="popup">
+      <div id="popup2Content" class="popupContent">
+        <span class="close" onclick="closeErrorPopUp2()">&times;</span>
+        <img src="./img/error.png" alt="" />
+        <p>There has been a problem with your fetch operation</p>
+        <button class="okButton error" onclick="closeErrorPopUp2()">OK</button>
+      </div>
+    </div>
+    <script src="./js/config.js"></script>
+    <script src="./js/notify.js"></script>
+    <script src="./js/ui.js"></script>
+    <script src="./js/home.js"></script>
+  </body>
+</html>

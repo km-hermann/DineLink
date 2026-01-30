@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dataBase</title>
+    <link rel="stylesheet" href="./css/admin.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+        <link rel="stylesheet" href="./css/dataBase.css" />
+      </head>
+  <body>
+    <header>
+      <div class="headerContainer">
+        <div class="headerTitle">
+          <img src="./img/admin.png" alt="" />
+          <a id="logo" class="nav-link" href="admin.html">DineLink Admin</a>
+        </div>
+        <nav class="nav">
+          <a class="nav-link" href="adminOrder.html">Orders</a>
+          <a class="nav-link" href="admin.html">Products</a>
+          <a class="nav-link active" href="dataBase.html">Database</a>
+          <button onclick="adminLogout()" style="padding:10px 20px; border-radius:12px; border:1px solid rgba(255,255,255,0.3); background:rgba(255,255,255,0.1); color:white; cursor:pointer; font-weight:700; margin-left:10px;">Logout</button>
+        </nav>
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      </div>
+    </header>
+    <div class="main-content">
+      <div class="container">
+          <h1>Orders Database</h1>
+          
+          <div class="search-section">
+              <input type="text" id="searchInput" placeholder="Search orders...">
+          </div>
+
+          <div class="date-filter">
+              <label>From:</label>
+              <input type="date" id="startDate" title="Start date" placeholder="Start date">
+              <label>To:</label>
+              <input type="date" id="endDate" title="End date" placeholder="End date">
+          </div>
+
+          <table class="orders-table">
+              <thead>
+                  <tr>
+                      <th>Table ID</th>
+                      <th>Order ID</th>
+                      <th>Item Name</th>
+                      <th>Quantity</th>
+                      <th>Price</th>
+                      <th>Time</th>
+                  </tr>
+              </thead>
+              <tbody id="ordersTableBody">
+                  <!-- Orders will be grouped by table and populated here -->
+              </tbody>
+          </table>
+
+          <div class="total-section">
+              <p>Total Amount: <span id="totalAmount">00FCFA</span></p>
+          </div>
+      </div>
+    </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/notify.js"></script>
+  <script src="js/adminAuth.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/dataBase.js"></script>
+</body>
+</html>

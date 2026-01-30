@@ -1,0 +1,84 @@
+/* =========================================
+   DATABASE TABLE STYLES
+   ========================================= */
+.container {
+  max-width: var(--max-width);
+  margin: 40px auto;
+  padding: 20px;
+}
+
+input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 2px solid #eee;
+  background: none;
+}
+
+.date-filter {
+  margin: 20px auto;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.orders-table th, .orders-table td {
+  padding: 5px 10px;
+  text-align: left;
+  border-bottom: 2px solid #eee;
+}
+
+.table-header {
+  background: rgb(56, 112, 214);
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.orders-table th {
+  background: #333;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.total-section {
+  margin-top: 30px;
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+  .orders-table thead { display: none; }
+  
+  .orders-table tr {
+    display: block;
+    border: 1px solid #eee;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .orders-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    padding: 8px 10px;
+  }
+  
+  .orders-table td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: #888;
+  }
+}

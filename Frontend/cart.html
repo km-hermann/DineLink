@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cart</title>
+    <link rel="stylesheet" href="./css/cart.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="headerContainer">
+        <div class="headerTitle">
+          <img src="./img/logo2.png" alt="" />
+          <a id="logo" class="nav-link title" href="home.html">DineLink</a>
+        </div>
+        <nav class="nav">
+          <a class="nav-link" href="order.html">Orders</a>
+        </nav>
+        <div class="cartLogoContainer">
+          <a class="cartLink active" href="cart.html">
+            <img
+              src="./img/cart3.png"
+              style="height: 35px; width: 35px"
+              alt=""
+            />
+            <span id="cartCount"></span>
+          </a>
+        </div>
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      </div>
+    </header>
+    <div class="main-content">
+      <div id="cartContainer" class="cartContainer"></div>
+      <div id="summary" class="summary"></div>
+      <img
+        id="emptyCartImage"
+        src="./img/emptyCart.png"
+        alt="Your cart is empty"
+      />
+      <div class="btnContainer">
+        <button id="orderButton" class="orderButton" onclick="openPopUp()">
+          Proceed to orders
+        </button>
+        <button id="emptyCartButton" class="emptyCartButton" onclick="openPopUp3()">
+          Empty Cart
+        </button>
+      </div>
+    </div>
+
+    <div id="popup" class="popup">
+      <div id="popupContent" class="popupContent">
+        <span class="close" onclick="closePopUp()">&times;</span>
+        <h2>Order Confirmation</h2>
+        <p>Are you sure you want to proceed with the order?</p>
+        <div id="orderSummary" class="orderSummary"></div>
+        <div id="totalAmount" class="totalAmount"></div>
+        <div class="btnContainer">
+          <button class="confirmButton" onclick="addToOrder()">Confirm</button>
+          <button class="cancelButton" onclick="closePopUp()">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <div id="popup2" class="popup2">
+      <div id="popup2Content" class="popup2Content">
+        <span class="close" onclick="closePopUp2()">&times;</span>
+        <img src="./img/validate4.png" alt="" />
+        <p>Ordered successfully</p>
+        <a href="order.html"
+          ><button class="okButton" onclick="closePopUp2()">
+            Go to Orders
+          </button></a
+        >
+      </div>
+    </div>
+
+    <div id="popup3" class="popup">
+      <div id="popup3Content" class="popupContent">
+        <span class="close" onclick="closePopUp3()">&times;</span>
+        <h2>Empty Cart Confirmation</h2>
+        <p>Are you sure you want to empty the cart?</p>
+        <div id="orderSummary3" class="orderSummary"></div>
+        <div id="totalAmount3" class="totalAmount"></div>
+        <div class="btnContainer">
+          <button class="confirmButton" onclick="emptyCart()">Confirm</button>
+          <button class="cancelButton" onclick="closePopUp3()">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="popup4" class="popup2">
+      <div id="popup4Content" class="popup2Content">
+        <span class="close" onclick="closePopUp4()">&times;</span>
+        <img src="./img/empty.png" alt="" />
+        <p>Emptied successfully</p>
+          <button class="okButton" onclick="closePopUp4()">Ok</button>
+      </div>
+    </div>
+
+    <script src="./js/config.js"></script>
+    <script src="./js/notify.js"></script>
+    <script src="./js/ui.js"></script>
+    <script src="./js/cart.js"></script>
+  </body>
+</html>

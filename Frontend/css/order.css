@@ -1,0 +1,176 @@
+/* =========================================
+   ORDER PAGE STYLES
+   ========================================= */
+.orderContainer {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.orderItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border: 2px solid #eee;
+  transition: transform 0.3s ease;
+}
+
+.orderItem:hover {
+  transform: scale(1.01);
+}
+
+.itemImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.itemInfo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.itemDetails {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.itemName {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+  min-width: 150px;
+}
+
+.itemDetail {
+  font-weight: 600;
+  color: #666;
+  white-space: nowrap;
+}
+
+.itemPrice {
+  font-weight: 700;
+  color: var(--success);
+  margin: 0 30px;
+  min-width: 100px;
+  text-align: right;
+}
+
+/* Status Icons & Animations */
+.statusButton {
+  margin-left: 20px;
+  border: none;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #666;
+}
+
+.statusButton img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+  object-fit: contain;
+}
+
+/* Animations */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.pending img {
+  animation: spin 1s linear infinite; /* Faster spin */
+}
+
+.cooking img {
+  animation: bounce 0.5s ease-in-out infinite; /* Faster bounce */
+}
+
+.delivered img {
+  animation: pulse 1.2s ease-in-out infinite; /* Faster pulse */
+}
+
+/* Tooltips for status */
+.statusButton::after {
+  content: attr(data-status);
+  display: block;
+  font-size: 0.75rem;
+  margin-top: 4px;
+  color: #888;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 680px) {
+
+  .orderContainer{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 5;
+  }
+
+  .orderItem {
+    flex-direction: column;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .itemInfo {
+    flex-direction: column;
+  }
+
+  .itemDetails {
+    flex-direction: column;
+  }
+
+  .itemImage {
+    margin-right: 0;
+    margin-bottom: 15px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .itemPrice {
+    text-align: center;
+  }
+
+  .statusButton {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 660px) {
+  .orderContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}

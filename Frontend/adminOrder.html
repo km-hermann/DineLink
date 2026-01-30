@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>adminOrders</title>
+    <link rel="stylesheet" href="./css/admin.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/adminOrder.css" />
+  </head>
+  <body>
+    <header>
+      <div class="headerContainer">
+        <div class="headerTitle">
+          <img src="./img/admin.png" alt="" />
+          <a id="logo" class="nav-link" href="admin.html">DineLink Admin</a>
+        </div>
+        <nav class="nav">
+          <a class="nav-link active" href="adminOrder.html">Orders</a>
+          <a class="nav-link" href="admin.html">Products</a>
+          <a class="nav-link" href="dataBase.html">Database</a>
+          <button onclick="adminLogout()" style="padding:10px 20px; border-radius:12px; border:1px solid rgba(255,255,255,0.3); background:rgba(255,255,255,0.1); color:white; cursor:pointer; font-weight:700; margin-left:10px;">Logout</button>
+        </nav>
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      </div>
+    </header>
+    <div class="main-content">
+      <div id="orderContainer" class="orderContainer">
+          
+      </div>
+      <div id="summary" class="summary"></div>
+    </div>
+
+    <div id="errorPopup1" class="popup">
+      <div id="errorPopup1Content" class="popupContent">
+        <span class="close" onclick="closeErrorPopUp1()">&times;</span>
+        <img src="./img/error.png" alt="" />
+        <p>Network response was not ok</p>
+        <button class="okButton error" onclick="closeErrorPopUp1()">OK</button>
+      </div>
+    </div>
+
+    <div id="errorPopup2" class="popup">
+      <div id="errorPopup2Content" class="popupContent">
+        <span class="close" onclick="closeErrorPopUp2()">&times;</span>
+        <img src="./img/error.png" alt="" />
+        <p>There has been a problem with your fetch operation</p>
+        <button class="okButton error" onclick="closeErrorPopUp2()">OK</button>
+      </div>
+    </div>
+
+    <script src="./js/config.js"></script>
+    <script src="./js/notify.js"></script>
+    <script src="./js/ui.js"></script>
+    <script src="./js/adminOrder.js"></script>
+  </body>
+</html>
